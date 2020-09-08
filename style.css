@@ -1,0 +1,118 @@
+* {
+    font-family: "Bahnschrift", sans-serif;
+    font-size: 20px;
+    color: #363636;
+    text-align: center;
+}
+body {
+    background: #eeeeee;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.days {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 5px;
+    margin: auto;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+.daycard {
+    display: grid;
+    grid-gap: 30px;
+}
+.lessioncard {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 2fr 4fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    min-height: 100px;
+    background: linear-gradient(135deg, #f0f0f0, #eaeaea);
+    box-shadow: 5px 5px 10px #dddddd;
+    border: 2px solid #363636; 
+    border-radius: 5px;
+}
+.cell {
+    margin: auto;
+    padding: 10px;
+    background-color: #eeeeee;
+    box-shadow: 5px 5px 10px #dddddd;
+    border: 2px solid #363636; 
+    border-radius: 5px;
+}
+button {
+    margin: 5px;
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+    min-width: 50px;
+    max-width: 200px;
+    background: linear-gradient(135deg, #f0f0f0, #dfdfdf);
+    box-shadow: 5px 5px 10px #dddddd;
+    border: 2px solid #363636; 
+}
+button:hover {
+    cursor: pointer;
+}
+button:active {
+    background: linear-gradient(135deg, #dfdfdf, #f0f0f0);
+}
+.teacher, .classroom {
+    font-size: 16px;
+}
+.invisible {
+    display: none;
+}
+.lession {
+    display: grid;
+    grid-gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #363636;
+}
+.time {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.single {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.singlewidth {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.singleheight {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.firstsubgroup {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.secondsubgroup {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.nomenator {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.denomenator {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.borderless {
+    border: none;
+}
+@font-face {
+	font-family: "Bahnschrift", sans-serif;
+    src: url("/bahnschrift.ttf");
+}
