@@ -1,6 +1,6 @@
 * {
-    font-family: "Bahnschrift", sans-serif;
-    font-size: 20px;
+    font-family: "BS", sans-serif;
+    font-size: 16px;
     color: #363636;
     text-align: center;
 }
@@ -14,27 +14,25 @@ body {
 .days {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 10px;
     padding: 5px;
     margin: auto;
-    margin-bottom: 30px;
     max-width: 800px;
 }
 .daycard {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 10px;
 }
 .lessioncard {
     display: grid;
-    padding: 20px;
+    padding: 10px;
     grid-template-columns: 2fr 4fr 4fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
     text-align: center;
     min-height: 100px;
     background: linear-gradient(135deg, #f0f0f0, #eaeaea);
     box-shadow: 5px 5px 10px #dddddd;
-    border: 2px solid #363636; 
     border-radius: 5px;
 }
 .cell {
@@ -42,7 +40,6 @@ body {
     padding: 10px;
     background-color: #eeeeee;
     box-shadow: 5px 5px 10px #dddddd;
-    border: 2px solid #363636; 
     border-radius: 5px;
 }
 button {
@@ -52,18 +49,14 @@ button {
     padding: 10px;
     min-width: 50px;
     max-width: 200px;
-    background: linear-gradient(135deg, #f0f0f0, #dfdfdf);
+    background: linear-gradient(135deg, #f0f0f0, #eaeaea);
     box-shadow: 5px 5px 10px #dddddd;
-    border: 2px solid #363636; 
 }
 button:hover {
     cursor: pointer;
 }
 button:active {
     background: linear-gradient(135deg, #dfdfdf, #f0f0f0);
-}
-.teacher, .classroom {
-    font-size: 16px;
 }
 .invisible {
     display: none;
@@ -73,11 +66,16 @@ button:active {
     grid-gap: 5px;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid #363636;
 }
 .time {
     grid-row-start: 1;
     grid-row-end: 3;
+}
+.lession_bottom {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
 }
 .single {
     grid-column-start: 2;
@@ -112,7 +110,16 @@ button:active {
 .borderless {
     border: none;
 }
+.large {
+    font-size: 24px;
+}
+.mid {
+    font-size: 16px;
+}
+.small {
+    font-size: 12px;
+}
 @font-face {
-	font-family: "Bahnschrift", sans-serif;
-    src: url("/bahnschrift.ttf");
+	font-family: "BS";
+    src: url("BS.ttf");
 }
