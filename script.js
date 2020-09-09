@@ -57,8 +57,8 @@ let fourth;
 let card;
 
 let monday = [
-                card = new LessionCard(times[0], [new Lession("Элитный английский", "хз где", "хз кто", "single")]),
-                card = new LessionCard(times[1], [new Lession("Элитный английский", "хз где", "хз кто", "single")]),
+                card = new LessionCard(times[0], [new Lession("Элитный английский", "315", "Кудинова", "single")]),
+                card = new LessionCard(times[1], [new Lession("Элитный английский", "315", "Кудинова", "single")]),
                 card = new LessionCard(times[2], [new Lession("Вычислительные методы", "226", "Корольков", "single")]),
                 card = new LessionCard(times[3]),
                 card = new LessionCard(times[4], [new Lession("Тервер и матстат", "409П", "Чудинова", "single")]),
@@ -115,7 +115,7 @@ let saturday = [
                 new LessionCard(times[0]),
                 new LessionCard(times[1]),
                 new LessionCard(times[2], [new Lession("Машинное обучение", "227", "Золотарёв", "single")]),
-                new LessionCard(times[3], [new Lession("Элитный английский", "хз где", "хз кто", "single")]),
+                new LessionCard(times[3], [new Lession("Элитный английский", "хз где", "Кудинова", "single")]),
                 new LessionCard(times[4]),
                 new LessionCard(times[5]),
                 new LessionCard(times[6]),
