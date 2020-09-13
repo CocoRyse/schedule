@@ -2,7 +2,7 @@
 let daycard = document.querySelector(".daycard");
 class Lession
 {
-    constructor(aTitle, aClassroom, aTeacher, aType)
+    constructor(aTitle, aClassroom = "", aTeacher = "", aType = "")
     {
         this.title = aTitle;
         this.classroom = aClassroom;
@@ -67,11 +67,11 @@ let monday = [
 ];
 
 let tuesday = [
-                new LessionCard(times[0]),
-                new LessionCard(times[1]),
-                new LessionCard(times[2]),
-                new LessionCard(times[3]),
-                new LessionCard(times[4]),
+                new LessionCard(times[0], [new Lession("Военная подготовка", "", "", "single")]),
+                new LessionCard(times[1], [new Lession("Военная подготовка", "", "", "single")]),
+                new LessionCard(times[2], [new Lession("Военная подготовка", "", "", "single")]),
+                new LessionCard(times[3], [new Lession("Военная подготовка", "", "", "single")]),
+                new LessionCard(times[4], [new Lession("Военная подготовка", "", "", "single")]),
                 new LessionCard(times[5]),
                 new LessionCard(times[6]),
 ];
@@ -83,6 +83,8 @@ let wednesday = [
                 new LessionCard(times[4]),
                 new LessionCard(times[5]),
                 new LessionCard(times[6]),
+                new LessionCard(`<nobr>20:00&ndash;21:30</nobr><br><nobr class="small">Онлайн-пара</nobr>`,
+                                [new Lession("MS.NET", "Moodle", "Старикова", "single")]),
 
 ];
 let thursday = [
@@ -96,7 +98,8 @@ let thursday = [
                                             new Lession("ОС", "20?", "Вощинская", "secondsubgroup denominator")]),
                 new LessionCard(times[4], [new Lession("Тервер", "433", "Каширина", "single")]),
                 new LessionCard(times[5]),
-                new LessionCard(times[6]),
+                new LessionCard(`<nobr>19:30&ndash;21:00</nobr><br><nobr class="small">Онлайн-пара</nobr>`,
+                                [new Lession("Машинное обучение", "Zoom", "Золотарёв", "single")]),
 
 ];
 let friday = [
@@ -114,7 +117,7 @@ let friday = [
 let saturday = [
                 new LessionCard(times[0]),
                 new LessionCard(times[1]),
-                new LessionCard(times[2], [new Lession("Машинное обучение", "227", "Золотарёв", "single")]),
+                new LessionCard(times[2]),//[new Lession("Машинное обучение", "227", "Золотарёв", "single")]),
                 new LessionCard(times[3], [new Lession("Элитный английский", "хз где", "Кудинова", "single")]),
                 new LessionCard(times[4]),
                 new LessionCard(times[5]),
@@ -125,10 +128,11 @@ function dayclick(day)
 {
     daycard.innerHTML = "";
     let result = "";
-    for (let i = 0; i < 7; i++) 
+    /*for (let i = 0; i < 7; i++) 
     { 
         result += day[i].HTMLify();
-    }
+    }*/
+    day.forEach(item => {result += item.HTMLify();})
     daycard.innerHTML = result;
     return;
 }
@@ -172,5 +176,5 @@ switch (day) {
     case 4: thursdayclick(); break;
     case 5: fridayclick(); break;
     case 6: saturdayclick(); break;
-    case 7: mondayclick(); break;
+    case 0: mondayclick(); break;
 }
