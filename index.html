@@ -1,28 +1,62 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Расписание</title>
+    <title>Расписание 2</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div></div>
-        <div>
-            <div class="days">
-                <button type="button" class="daybutton" onclick="mondayclick()">пн</button>
-                <button type="button" class="daybutton" onclick="tuesdayclick()">вт</button>
-                <button type="button" class="daybutton" onclick="wednesdayclick()">ср</button>
-                <button type="button" class="daybutton" onclick="thursdayclick()">чт</button>
-                <button type="button" class="daybutton" onclick="fridayclick()">пт</button>
-                <button type="button" class="daybutton" onclick="saturdayclick()">сб</button>
-            </div>
-            <div class="daycard">
-            </div>
+    <div class="circle"></div>
+    <div class="mainframe">
+        <div class="mf_outer">
+            <div class="mf_middle">
+                <div class="mf_inner scroller">
+                    <button class="themechanger time" type="button" onclick="changeTheme()">
+                        <div class="switch">
+                            <div class="clipcircle"></div>
+                            <svg class="sun icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M36.9881 3.92L30 0L23.0119 3.92L15 4.01924L10.9081 10.9081L4.01924 15L3.92 23.0119L0 30L3.92 36.9881L4.01924 45L10.9081 49.0919L15 55.9808L23.0119 56.08L30 60L36.9881 56.08L45 55.9808L49.0919 49.0919L55.9808 45L56.08 36.9881L60 30L56.08 23.0119L55.9808 15L49.0919 10.9081L45 4.01924L36.9881 3.92ZM30 52C42.1503 52 52 42.1503 52 30C52 17.8497 42.1503 8 30 8C17.8497 8 8 17.8497 8 30C8 42.1503 17.8497 52 30 52Z"/>
+                                <path d="M50 30C50 41.0457 41.0457 50 30 50C18.9543 50 10 41.0457 10 30C10 18.9543 18.9543 10 30 10C41.0457 10 50 18.9543 50 30Z"/>
+                            </svg>                            
+                            <svg class="moon icon" viewBox="0 0 48 60" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M47.1798 5.40306C34.7004 6.80411 25 17.3921 25 30.2458C25 42.8894 34.3859 53.3407 46.5703 55.0124C41.8225 58.1641 36.1256 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C36.3901 0 42.3136 1.99788 47.1798 5.40306Z"/>
+                            </svg>
+                            
+                        </div>        
+                    </button>
+                    <div class="time first flexcenter">
+                        <div><nobr>8:00–9:35</nobr><br><nobr class="s">Пара #1</nobr></div>
+                    </div>
+                    <div class="time second flexcenter">
+                        <div><nobr>9:45–11:20</nobr><br><nobr class="s">Пара #2</nobr></div>
+                    </div>
+                    <div class="time third flexcenter">
+                        <div><nobr>11:30–13:05</nobr><br><nobr class="s">Пара #3</nobr></div>
+                    </div>
+                    <div class="time fourth flexcenter">
+                        <div><nobr>13:25–15:00</nobr><br><nobr class="s">Пара #4</nobr></div>
+                    </div>
+                    <div class="time fifth flexcenter">
+                        <div><nobr>15:10–16:45</nobr><br><nobr class="s">Пара #5</nobr></div>
+                    </div>
+                    <div class="time sixth flexcenter">
+                        <div><nobr>16:55–18:30</nobr><br><nobr class="s">Пара #6</nobr></div>
+                    </div>
+                    <div class="time seventh flexcenter">
+                        <div><nobr>18:40–20:00</nobr><br><nobr class="s">Пара #7</nobr></div>
+                    </div>
+                    <header class="mon">Понедельник</header>
+                    <header class="tue">Вторник</header>
+                    <header class="wed">Среда</header>
+                    <header class="thu">Четверг</header>
+                    <header class="fri">Пятница</header>
+                    <header class="sat">Суббота</header>
+                </div>
+            </div>    
         </div>
-        <div></div>
     </div>
-    <script type="text/javascript" src="script.js"></script>
 </body>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 </html>
