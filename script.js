@@ -7,7 +7,7 @@ let times = document.querySelectorAll(".time");
 let root = document.documentElement;
 let sun = document.querySelector(".sun");
 let moon = document.querySelector(".moon");
-let toggler = document.querySelector(".clipcircle"); 
+let togglecircle = document.querySelector(".togglecircle"); 
 
 class Lession
 {
@@ -63,7 +63,7 @@ class LessionCard
     HTMLify(day)
     {
         let result = "";
-        result = `<div class="lession ${this.num} ${day}">`;
+        result = `<div class="lession cell ${this.num} ${day}">`;
         this.lessions.forEach((item, index, array) => 
                                 { result += item.HTMLify(); }
                              );
@@ -76,7 +76,7 @@ let monday = [
                 new LessionCard(1, [new Lession("Элитный английский", "315", "Кудинова", "all")]),
                 new LessionCard(2, [new Lession("Элитный английский", "315", "Кудинова", "all")]),
                 new LessionCard(3, [new Lession("Вычислительные методы", "226", "Корольков", "all")]),
-                new LessionCard(4),
+                new LessionCard(4, [new Lession("", "", "", "all")]),
                 new LessionCard(5, [new Lession("Тервер и матстат", "409П", "Чудинова", "all")]),
                 new LessionCard(6, [new Lession("ПМУ", "12", "Ширяев", "all")]),
                 new LessionCard(7, [new Lession("ПМУ", "11", "Ширяев", "all")]),
@@ -88,58 +88,57 @@ let tuesday = [
                 new LessionCard(3, [new Lession("Военная подготовка", "", "", "all")]),
                 new LessionCard(4, [new Lession("Военная подготовка", "", "", "all")]),
                 new LessionCard(5, [new Lession("Военная подготовка", "", "", "all")]),
-                new LessionCard(6),
-                new LessionCard(7),
+                new LessionCard(6, [new Lession("", "", "", "all")]),
+                new LessionCard(7, [new Lession("", "", "", "all")]),
 ];
 
 let wednesday = [
-                new LessionCard(1, [new Lession("Java", "216", "Курбатова", "nom"), new Lession("Машинное обучение", "214", "Золотарёв", "fgdenom")]),
-                new LessionCard(2, [new Lession("Ассемблер", "9", "Вощинская", "fgnom"), new Lession("Машинное обучение", "304", "Золотарёв", "sgnom"), new Lession("Ассемблер", "9", "Вощинская", "sgdenom")]),
+                new LessionCard(1, [new Lession("Java", "216", "Курбатова", "nom"), new Lession("Машинное обучение", "214", "Золотарёв", "fgdenom"), new Lession("", "", "", "sgdenom")]),
+                new LessionCard(2, [new Lession("Ассемблер", "9", "Вощинская", "fgnom"), new Lession("Машинное обучение", "304", "Золотарёв", "sgnom"), new Lession("", "", "", "fgdenom"), new Lession("Ассемблер", "9", "Вощинская", "sgdenom")]),
                 new LessionCard(3, [new Lession("БД", "12", "Каширская", "all")]),
                 new LessionCard(4, [new Lession("Физкультура", "", "", "all")]),
-                new LessionCard(5),
-                new LessionCard(6),
-                new LessionCard(7),
-                new LessionCard(7,
-                                [new Lession("MS.NET (20:00–21:30, онлайн)", "Moodle", "Старикова", "all")]),
+                new LessionCard(5, [new Lession("", "", "", "all")]),
+                new LessionCard(6, [new Lession("", "", "", "all")]),
+                new LessionCard(7, [new Lession("", "", "", "all")]),
+                new LessionCard(7, [new Lession("MS.NET (20:00–21:30, онлайн)", "Moodle", "Старикова", "all")]),
 
 ];
 
 let thursday = [
                 new LessionCard(1, [new Lession("Java", "433", "Курбатова", "all")]),
                 new LessionCard(2, [new Lession("Вычислительные методы", "337", "Корзунина", "all")]),
-                new LessionCard(3, [new Lession("Вычислительные методы", "337", "Корзунина", "nom")]),
+                new LessionCard(3, [new Lession("Вычислительные методы", "337", "Корзунина", "nom"), new Lession("", "", "", "denom")]),
                 new LessionCard(4, [new Lession("ОС", "214", "Вощинская", "fgnom"),
-                                            new Lession("MS.NET", "304", "Курченкова", "sgnom"),
-                                            new Lession("MS.NET", "9", "Курченкова", "fgdenom"),
-                                            new Lession("ОС", "20", "Вощинская", "sgdenom")]),
+                                    new Lession("MS.NET", "304", "Курченкова", "sgnom"),
+                                    new Lession("MS.NET", "9", "Курченкова", "fgdenom"),
+                                    new Lession("ОС", "20", "Вощинская", "sgdenom")]),
                 new LessionCard(5, [new Lession("Тервер", "433", "Каширина", "all")]),
-                new LessionCard(6),
+                new LessionCard(6, [new Lession("", "", "", "all")]),
                 new LessionCard(7,
                                 [new Lession("Машинное обучение (19:30–21:00, онлайн)", "Zoom", "Золотарёв", "all")]),
 
 ];
 
 let friday = [
-                new LessionCard(1),
-                new LessionCard(2),
+                new LessionCard(1, [new Lession("", "", "", "all")]),
+                new LessionCard(2, [new Lession("", "", "", "all")]),
                 new LessionCard(3, [new Lession("ОС", "226", "Вощинская", "all")]),
                 new LessionCard(4, [new Lession("БД", "12", "Каширская", "all")]),
                 new LessionCard(5, [new Lession("Ассемблер", "226", "Вощинская", "nom"),
-                                            new Lession("Ассемблер", "337", "Вощинская", "denom")]),
-                new LessionCard(6, [new Lession("Физкультура", "", "", "denom")]),
-                new LessionCard(7),
+                                    new Lession("Ассемблер", "337", "Вощинская", "denom")]),
+                new LessionCard(6, [new Lession("Физкультура", "", "", "denom"), new Lession("", "", "", "nom")]),
+                new LessionCard(7, [new Lession("", "", "", "all")]),
 
 ];
 
 let saturday = [
-                new LessionCard(1),
-                new LessionCard(2),
-                new LessionCard(3),
+                new LessionCard(1, [new Lession("", "", "", "all")]),
+                new LessionCard(2, [new Lession("", "", "", "all")]),
+                new LessionCard(3, [new Lession("", "", "", "all")]),
                 new LessionCard(4, [new Lession("Элитный английский", "315", "Кудинова", "all")]),
-                new LessionCard(5),
-                new LessionCard(6),
-                new LessionCard(7),
+                new LessionCard(5, [new Lession("", "", "", "all")]),
+                new LessionCard(6, [new Lession("", "", "", "all")]),
+                new LessionCard(7, [new Lession("", "", "", "all")]),
 ];
 
 function dayfill(day, dayName)
@@ -186,12 +185,12 @@ function changeScheme(colors) {
 
 function makeLight() {
     changeScheme(lightColors);
-    toggler.style.transform = "translateX(45px)";
+    togglecircle.style.transform = "translateX(45px)";
 }
 
 function makeDark() {
     changeScheme(darkColors);
-    toggler.style.transform = "translateX(0px)";
+    togglecircle.style.transform = "translateX(0px)";
 }
 
 function setTheme() {
@@ -205,13 +204,13 @@ function changeTheme() {
     if (currentTheme == 0) {
         animateChange(darkColors);
         darkAnimateCircle();
-        gsap.to(".clipcircle", {duration: 1, x: 0});
+        gsap.to(".togglecircle", {duration: 1, x: 0});
         currentTheme = 1;
     }
     else {
         animateChange(lightColors);
         lightAnimateCircle();
-        gsap.to(".clipcircle", {duration: 1, x: 45});
+        gsap.to(".togglecircle", {duration: 1, x: 45});
         currentTheme = 0;
     }
     localStorage.setItem('theme', currentTheme);

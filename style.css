@@ -99,6 +99,10 @@ button:hover {
     padding-bottom: 10px;
     border-radius: 5px;
     gap: 10px;
+    scroll-snap-type: x mandatory;
+}
+.cell {
+    scroll-snap-align: start;
 }
 .mainframe, .mf_outer {
     padding: 10px;
@@ -228,7 +232,7 @@ button:hover {
     height: 20px;
     fill: var(--lessiontopcardColor);
 }
-.clipcircle {
+.togglecircle {
     display: block;
     position: relative;
     top: 5px;
