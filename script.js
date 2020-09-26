@@ -185,7 +185,7 @@ function changeScheme(colors) {
 
 function makeLight() {
     changeScheme(lightColors);
-    togglecircle.style.transform = "translateX(45px)";
+    togglecircle.style.transform = "translateX(44px)";
 }
 
 function makeDark() {
@@ -210,7 +210,7 @@ function changeTheme() {
     else {
         animateChange(lightColors);
         lightAnimateCircle();
-        gsap.to(".togglecircle", {duration: 1, x: 45});
+        gsap.to(".togglecircle", {duration: 1, x: 44});
         currentTheme = 0;
     }
     localStorage.setItem('theme', currentTheme);
