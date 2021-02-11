@@ -93,9 +93,9 @@ let tuesday = [
 ];
 
 let wednesday = [
-                new LessionCard(1, [new Lession("Java", "407П", "Курбатова", "sg")]),
-                new LessionCard(2, [new Lession("РиБ веб приложений", "12", "Зиновьев", "nom")]),
-                new LessionCard(3, [new Lession("РиБ веб приложений", "433", "Зиновьев", "denom")]),
+                new LessionCard(1, [new Lession("", "", "", "fg"), new Lession("Java", "407П", "Курбатова", "sg")]),
+                new LessionCard(2, [new Lession("РиБ веб приложений", "12", "Зиновьев", "nom"), new Lession("", "", "", "denom")]),
+                new LessionCard(3, [new Lession("", "", "", "nom"), new Lession("РиБ веб приложений", "433", "Зиновьев", "denom")]),
                 new LessionCard(4, [new Lession("Физкультура", "", "", "all")]),
                 new LessionCard(5, [new Lession("", "", "", "all")]),
                 new LessionCard(6, [new Lession("Криптология", "онлайн", "Барановский", "all")]),
@@ -106,15 +106,15 @@ let thursday = [
                 new LessionCard(1, [new Lession("", "", "", "all")]),
                 new LessionCard(2, [new Lession("МО", "409П", "Белоусова", "all")]),
                 new LessionCard(3, [new Lession("SQL", "226", "Матвеева", "all")]),
-                new LessionCard(4, [new Lession("МС", "435", "Каширина", "nom")]),
+                new LessionCard(4, [new Lession("МС", "435", "Каширина", "nom"), new Lession("", "", "", "denom")]),
                 new LessionCard(5, [new Lession("", "", "", "all")]),
-                new LessionCard(6, [new Lession("МС", "437", "Чудинова", "nom")]),
+                new LessionCard(6, [new Lession("МС", "437", "Чудинова", "nom"), new Lession("", "", "", "nom")]),
                 new LessionCard(7, [new Lession("", "", "", "all")]),
 
 ];
 
 let friday = [
-                new LessionCard(1, [new Lession("Java", "407П", "Курбатова", "fg")]),
+                new LessionCard(1, [new Lession("Java", "407П", "Курбатова", "fg"), new Lession("", "", "", "sg")]),
                 new LessionCard(2, [new Lession("", "", "", "all")]),
                 new LessionCard(3, [new Lession("Проектирование ИС", "онлайн", "Каширская", "all")]),
                 new LessionCard(4, [new Lession("Проектирование ИС", "онлайн", "Каширская", "all")]),
@@ -128,8 +128,8 @@ let saturday = [
                 new LessionCard(1, [new Lession("", "", "", "all")]),
                 new LessionCard(2, [new Lession("Распределённые системы", "226", "Мельников", "all")]),
                 new LessionCard(3, [new Lession("", "", "", "all")]),
-                new LessionCard(4, [new Lession("SQL", "9", "Матвеева", "fg")]),
-                new LessionCard(5, [new Lession("SQL", "9", "Матвеева", "sg")]),
+                new LessionCard(4, [new Lession("SQL", "9", "Матвеева", "fg"), new Lession("", "", "", "sg")]),
+                new LessionCard(5, [new Lession("", "", "", "fg"), new Lession("SQL", "9", "Матвеева", "sg")]),
                 new LessionCard(6, [new Lession("", "", "", "all")]),
                 new LessionCard(7, [new Lession("", "", "", "all")]),
 ];
