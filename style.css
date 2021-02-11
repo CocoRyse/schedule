@@ -108,6 +108,7 @@ button:hover {
     padding: 10px;
 }
 .card {
+    min-width: 200px;
     padding: 5px;
     border-radius: 4px;
     text-align: center;
