@@ -108,7 +108,7 @@ let thursday = [
                 new LessionCard(3, [new Lession("SQL", "226", "Матвеева", "all")]),
                 new LessionCard(4, [new Lession("МС", "435", "Каширина", "nom"), new Lession("", "", "", "denom")]),
                 new LessionCard(5, [new Lession("", "", "", "all")]),
-                new LessionCard(6, [new Lession("МС", "437", "Чудинова", "nom"), new Lession("", "", "", "nom")]),
+                new LessionCard(6, [new Lession("МС", "437", "Чудинова", "nom"), new Lession("", "", "", "denom")]),
                 new LessionCard(7, [new Lession("", "", "", "all")]),
 
 ];
