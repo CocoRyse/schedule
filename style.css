@@ -102,7 +102,7 @@ button:hover {
     scroll-snap-type: x proximity;
 }
 .cell {
-    min-width: 100px;
+    min-width: 150px;
     scroll-snap-align: start;
 }
 .mainframe, .mf_outer {
