@@ -74,7 +74,7 @@ class LessionCard
 
 let monday = [
                 new LessionCard(1, [new Lession("", "", "", "all")]),
-                new LessionCard(2, [new Lession("РиБ веб приложений", "онлайн", "Зиновьев", "nom"), new Lession("", "", "", "all")]),
+                new LessionCard(2, [new Lession("РиБ веб приложений", "онлайн", "Зиновьев", "nom"), new Lession("", "", "", "denom")]),
                 new LessionCard(3, [new Lession("Архитектура ВС и КС", "онлайн", "Вощинская", "all")]),
                 new LessionCard(4, [new Lession("Архитектура ВС и КС", "онлайн", "Вощинская", "all")]),
                 new LessionCard(5, [new Lession("", "", "", "all")]),
