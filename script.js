@@ -89,7 +89,7 @@ let tuesday = [
                 new LessionCard(4, [new Lession("Военная подготовка", "", "", "all")]),
                 new LessionCard(5, [new Lession("Военная подготовка", "", "", "all")]),
                 new LessionCard(6, [new Lession("КОСИ", "онлайн", "Селезнёв", "all")]),
-                new LessionCard(7, [new Lession("Учебная практика", "онлайн", "Быкова", "all")]),
+                new LessionCard(7, [new Lession("", "", "", "all")]),
 ];
 
 let wednesday = [
