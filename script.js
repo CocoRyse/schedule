@@ -7,7 +7,7 @@ let times = document.querySelectorAll(".time");
 let root = document.documentElement;
 let sun = document.querySelector(".sun");
 let moon = document.querySelector(".moon");
-let togglecircle = document.querySelector(".togglecircle"); 
+let togglecircle = document.querySelector(".togglecircle");
 
 class Lession
 {
@@ -36,7 +36,7 @@ class LessionCard
     constructor(aNum, aLessions = [])
     {
         switch (aNum) {
-            case 1: 
+            case 1:
                 this.num = "first";
                 break;
             case 2:
@@ -58,80 +58,78 @@ class LessionCard
                 this.num = "seventh";
                 break;
         }
-        this.lessions = aLessions; 
+        this.lessions = aLessions;
     }
     HTMLify(day)
     {
         let result = "";
         result = `<div class="lession cell ${this.num} ${day}">`;
-        this.lessions.forEach((item, index, array) => 
-                                { result += item.HTMLify(); }
-                             );
+        this.lessions.forEach((item, index, array) => result += item.HTMLify());
         result += `</div>`;
         return result;
     }
 }
 
 let monday = [
-                new LessionCard(1, [new Lession("", "", "", "all")]),
-                new LessionCard(2, [new Lession("РиБ веб приложений", "онлайн", "Зиновьев", "nom"), new Lession("", "", "", "denom")]),
-                new LessionCard(3, [new Lession("Архитектура ВС и КС", "онлайн", "Вощинская", "all")]),
-                new LessionCard(4, [new Lession("Архитектура ВС и КС", "онлайн", "Вощинская", "all")]),
-                new LessionCard(5, [new Lession("", "", "", "all")]),
-                new LessionCard(6, [new Lession("", "", "", "all")]),
-                new LessionCard(7, [new Lession("", "", "", "all")]),
+    new LessionCard(1, [new Lession("", "", "", "all")]),
+    new LessionCard(2, [new Lession("РиБ веб приложений", "онлайн", "Зиновьев", "nom"), new Lession("", "", "", "denom")]),
+    new LessionCard(3, [new Lession("Архитектура ВС и КС", "онлайн", "Вощинская", "all")]),
+    new LessionCard(4, [new Lession("Архитектура ВС и КС", "онлайн", "Вощинская", "all")]),
+    new LessionCard(5, [new Lession("", "", "", "all")]),
+    new LessionCard(6, [new Lession("", "", "", "all")]),
+    new LessionCard(7, [new Lession("", "", "", "all")]),
 ];
 
 let tuesday = [
-                new LessionCard(1, [new Lession("Военная подготовка", "", "", "all")]),
-                new LessionCard(2, [new Lession("Военная подготовка", "", "", "all")]),
-                new LessionCard(3, [new Lession("Военная подготовка", "", "", "all")]),
-                new LessionCard(4, [new Lession("Военная подготовка", "", "", "all")]),
-                new LessionCard(5, [new Lession("Военная подготовка", "", "", "all")]),
-                new LessionCard(6, [new Lession("КОСИ", "онлайн", "Селезнёв", "all")]),
-                new LessionCard(7, [new Lession("", "", "", "all")]),
+    new LessionCard(1, [new Lession("Военная подготовка", "", "", "all")]),
+    new LessionCard(2, [new Lession("Военная подготовка", "", "", "all")]),
+    new LessionCard(3, [new Lession("Военная подготовка", "", "", "all")]),
+    new LessionCard(4, [new Lession("Военная подготовка", "", "", "all")]),
+    new LessionCard(5, [new Lession("Военная подготовка", "", "", "all")]),
+    new LessionCard(6, [new Lession("КОСИ", "онлайн", "Селезнёв", "all")]),
+    new LessionCard(7, [new Lession("", "", "", "all")]),
 ];
 
 let wednesday = [
-                new LessionCard(1, [new Lession("", "", "", "fg"), new Lession("Java", "407П", "Курбатова", "sg")]),
-                new LessionCard(2, [new Lession("", "", "", "all")]),
-                new LessionCard(3, [new Lession("", "", "", "all")]),
-                new LessionCard(4, [new Lession("Физкультура", "", "", "all")]),
-                new LessionCard(5, [new Lession("", "", "", "all")]),
-                new LessionCard(6, [new Lession("Криптология", "онлайн", "Барановский", "all")]),
-                new LessionCard(7, [new Lession("МО", "онлайн", "Задорожний", "all")]),
+    new LessionCard(1, [new Lession("", "", "", "all")]),
+    new LessionCard(2, [new Lession("Java", "407П", "Курбатова", "all")]),
+    new LessionCard(3, [new Lession("", "", "", "all")]),
+    new LessionCard(4, [new Lession("Физкультура", "", "", "all")]),
+    new LessionCard(5, [new Lession("", "", "", "all")]),
+    new LessionCard(6, [new Lession("Криптология", "онлайн", "Барановский", "all")]),
+    new LessionCard(7, [new Lession("МО", "онлайн", "Задорожний", "all")]),
 ];
 
 let thursday = [
-                new LessionCard(1, [new Lession("", "", "", "all")]),
-                new LessionCard(2, [new Lession("МО", "409П", "Белоусова", "all")]),
-                new LessionCard(3, [new Lession("SQL", "226", "Матвеева", "all")]),
-                new LessionCard(4, [new Lession("МС", "435", "Каширина", "nom"), new Lession("", "", "", "denom")]),
-                new LessionCard(5, [new Lession("", "", "", "all")]),
-                new LessionCard(6, [new Lession("МС", "437", "Чудинова", "nom"), new Lession("", "", "", "denom")]),
-                new LessionCard(7, [new Lession("", "", "", "all")]),
+    new LessionCard(1, [new Lession("", "", "", "all")]),
+    new LessionCard(2, [new Lession("МО", "409П", "Белоусова", "all")]),
+    new LessionCard(3, [new Lession("SQL", "226", "Матвеева", "all")]),
+    new LessionCard(4, [new Lession("МС", "435", "Каширина", "nom"), new Lession("", "", "", "denom")]),
+    new LessionCard(5, [new Lession("", "", "", "all")]),
+    new LessionCard(6, [new Lession("МС", "437", "Чудинова", "nom"), new Lession("", "", "", "denom")]),
+    new LessionCard(7, [new Lession("", "", "", "all")]),
 
 ];
 
 let friday = [
-                new LessionCard(1, [new Lession("Java", "407П", "Курбатова", "fg"), new Lession("", "", "", "sg")]),
-                new LessionCard(2, [new Lession("", "", "", "all")]),
-                new LessionCard(3, [new Lession("Проектирование ИС", "онлайн", "Каширская", "all")]),
-                new LessionCard(4, [new Lession("Проектирование ИС", "онлайн", "Каширская", "all")]),
-                new LessionCard(5, [new Lession("Физкультура", "", "", "denom"), new Lession("", "", "", "nom")]),
-                new LessionCard(6, [new Lession("Java", "онлайн", "Курбатова", "all")]),
-                new LessionCard(7, [new Lession("", "", "", "all")]),
+    new LessionCard(1, [new Lession("", "", "", "all")]),
+    new LessionCard(2, [new Lession("", "", "", "all")]),
+    new LessionCard(3, [new Lession("Проектирование ИС", "онлайн", "Каширская", "all")]),
+    new LessionCard(4, [new Lession("Проектирование ИС", "онлайн", "Каширская", "all")]),
+    new LessionCard(5, [new Lession("Физкультура", "", "", "all")]),
+    new LessionCard(6, [new Lession("Java", "онлайн", "Курбатова", "all")]),
+    new LessionCard(7, [new Lession("", "", "", "all")]),
 
 ];
 
 let saturday = [
-                new LessionCard(1, [new Lession("", "", "", "all")]),
-                new LessionCard(2, [new Lession("Распределённые системы", "226", "Мельников", "all")]),
-                new LessionCard(3, [new Lession("", "", "", "all")]),
-                new LessionCard(4, [new Lession("SQL", "9", "Матвеева", "fg"), new Lession("", "", "", "sg")]),
-                new LessionCard(5, [new Lession("", "", "", "fg"), new Lession("SQL", "9", "Матвеева", "sg")]),
-                new LessionCard(6, [new Lession("", "", "", "all")]),
-                new LessionCard(7, [new Lession("", "", "", "all")]),
+    new LessionCard(1, [new Lession("", "", "", "all")]),
+    new LessionCard(2, [new Lession("Распределённые системы", "226", "Мельников", "all")]),
+    new LessionCard(3, [new Lession("SQL", "9", "Матвеева", "all")]),
+    new LessionCard(4, [new Lession("", "", "", "all")]),
+    new LessionCard(5, [new Lession("", "", "", "all")]),
+    new LessionCard(6, [new Lession("", "", "", "all")]),
+    new LessionCard(7, [new Lession("", "", "", "all")]),
 ];
 
 function dayfill(day, dayName)
@@ -160,16 +158,17 @@ let darkColors = ['#111317',
     '#343A46',
     '#3D4452'];
 
-let cssVars = ['--backgroundColor', 
-    '--outermfColor', 
-    '--backgroundboxColor', 
-    '--headerColor', 
-    '--textColor', 
-    '--bodyframeColor', 
-    '--lessioncardColor', 
+let cssVars = ['--backgroundColor',
+    '--outermfColor',
+    '--backgroundboxColor',
+    '--headerColor',
+    '--textColor',
+    '--bodyframeColor',
+    '--lessioncardColor',
     '--lessiontopcardColor'];
 
-let currentTheme = +localStorage.getItem('theme') || 0; //0 — light, 1 — dark
+let currentTheme = +localStorage.getItem('theme') ||
+window.matchMedia || window.matchMedia("(prefers-color-scheme: dark)") ? 1 : 0; // 0 — light, 1 — dark
 
 function changeScheme(colors) {
     for (let i = 0; i < 8; i++)
@@ -187,14 +186,14 @@ function makeDark() {
 }
 
 function setTheme() {
-    if (currentTheme == 0) 
+    if (currentTheme === 0)
         makeLight();
-    else 
+    else
         makeDark();
 }
 
 function changeTheme() {
-    if (currentTheme == 0) {
+    if (currentTheme === 0) {
         animateChange(darkColors);
         darkAnimateCircle();
         gsap.to(".togglecircle", {duration: 1, x: 0});
@@ -229,9 +228,9 @@ function lightAnimateCircle() {
 }
 
 function setBackgroundCirclePosition() {
-    if (currentTheme == 0) {
+    if (currentTheme === 0) {
         backCircle.style.transform = "translate(0px, 0px)";
-    } 
+    }
     else {
         backCircle.style.transform = "translate(1300px, 1200px)";
     }
