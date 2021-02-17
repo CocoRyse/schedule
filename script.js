@@ -167,8 +167,8 @@ let cssVars = ['--backgroundColor',
     '--lessioncardColor',
     '--lessiontopcardColor'];
 
-let currentTheme = +localStorage.getItem('theme') ||
-window.matchMedia || window.matchMedia("(prefers-color-scheme: dark)") ? 1 : 0; // 0 — light, 1 — dark
+let currentTheme = +localStorage.getItem('theme') ??
+window.matchMedia ?? window.matchMedia("(prefers-color-scheme: dark)").matches; // 0 — light, 1 — dark
 
 function changeScheme(colors) {
     for (let i = 0; i < 8; i++)
